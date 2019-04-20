@@ -1,0 +1,3 @@
+head -n1000 /src/Tweets/Pre-Processed\ Tweets/tweets_text_classical.txt | /src/Tweets/mapper.py | sort | /src/Tweets/reducer.py
+
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapred.map.tasks=4 -mapper /src/Tweets/mapper.py -reducer /src/Tweets/reducer.py -input /user/Tweets/* -output /user/Tweets/output

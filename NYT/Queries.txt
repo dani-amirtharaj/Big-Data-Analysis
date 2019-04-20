@@ -1,0 +1,24 @@
+
+1. music
+fq : subsection_name : "music" OR subject : "music"
+q : music
+
+2. rap
+fq : subsection_name : "music" OR subject : "music" OR subject : "rap"
+q : rap
+
+3. country
+fq : subsection_name : "music" OR subject : "music" OR subject : "country"
+q : country
+
+4. pop
+fq : subsection_name : "music" OR subject : "music" OR subject : "pop"
+q : pop
+
+5. rock
+fq : subsection_name : "music" OR subject : "music" OR subject : "rock"
+q : rock
+
+6. classical
+fq : subsection_name : "music" OR subject : "music" OR subject : "classical"
+q : classical
