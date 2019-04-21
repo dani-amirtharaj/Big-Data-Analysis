@@ -33,14 +33,15 @@ for line in sys.stdin:
         if (len(topList) == 0):
             topList.append([current_count, current_word])
         else:
-            ind = 0
-            for boolVal in [current_count > wordCount for wordCount, unused_word in topList]:
-                if (boolVal):
-                    topList.insert(ind, [current_count, current_word])
-                    if (len(topList) > 50):
-                        topList.pop(50)
-                    break
-                ind+=1
+            # ind = 0
+            # for boolVal in [current_count > wordCount for wordCount, unused_word in topList]:
+            #     if (boolVal):
+                    # topList.insert(ind, [current_count, current_word])
+                    # if (len(topList) > 50):
+                    #    topList.pop(50)
+                    # break
+                # ind+=1
+            topList.append([current_count, current_word])
         current_count = count
         current_word = word
     else:
@@ -52,13 +53,17 @@ if current_word == word:
     if (len(topList) == 0):
         topList.append([current_count, current_word])
     else:
-        ind = 0
-        for boolVal in [current_count > wordCount for wordCount, word in topList]:
-            if (boolVal):
-                topList.insert(ind, [current_count, current_word])
-                if (len(topList) > 50):
-                    topList.pop(50)
-                break
-            ind+=1
+        # ind = 0
+        # for boolVal in [current_count > wordCount for wordCount, word in topList]:
+        #     if (boolVal):
+                # topList.insert(ind, [current_count, current_word])
+                # if (len(topList) > 50):
+                #     topList.pop(50)
+                # break
+            # ind+=1
+        topList.append([current_count, current_word])
+    def sorter(pair):
+        return pair[0]
+    topList.sort(key = sorter, reverse = True)
     for count, word in topList:
         print '%s\t%s' % (word, count)
