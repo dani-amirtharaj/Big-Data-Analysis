@@ -8,6 +8,7 @@ current_pair = None
 current_count = 0
 pair = None
 topList = []
+dupList = []
 
 # input comes from STDIN
 for line in sys.stdin:
@@ -33,15 +34,9 @@ for line in sys.stdin:
     elif current_pair:
         if (len(topList) == 0):
             topList.append([current_count, current_pair])
-        else:
-            ind = 0
-            for boolVal in [current_count > pairCount for pairCount, unused_pair in topList]:
-                if (boolVal):
-                    topList.insert(ind, [current_count, current_pair])
-                    if (len(topList) > 20):
-                        topList.pop(20)
-                    break
-                ind+=1
+        elif [current_pair[1], current_pair[0]] not in dupList:
+            dupList.append(current_pair)
+            topList.append([current_count, current_pair])
         current_count = count
         current_pair = pair
     else:
@@ -52,14 +47,10 @@ for line in sys.stdin:
 if current_pair == pair:
     if (len(topList) == 0):
         topList.append([current_count, current_pair])
-    else:
-        ind = 0
-        for boolVal in [current_count > pairCount for pairCount, pair in topList]:
-            if (boolVal):
-                topList.insert(ind, [current_count, current_pair])
-                if (len(topList) > 20):
-                    topList.pop(20)
-                break
-            ind+=1
+    elif [current_pair[1], current_pair[0]] not in dupList:
+        topList.append([current_count, current_pair])
+    def sorter(pair):
+        return pair[0]
+    topList.sort(key = sorter, reverse = True)
     for count, pair in topList:
         print '%s\t%s' % (pair[0]+"~"+pair[1], count/2)

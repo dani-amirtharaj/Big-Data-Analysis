@@ -3,6 +3,8 @@
 
 import sys
 
+topList = ["album", "song", "one", "rock", "band", "music", "sound", "guitar", "love", "time"]
+
 # input comes from STDIN (standard input)
 for line in sys.stdin:
     # remove leading and trailing whitespace
@@ -11,14 +13,12 @@ for line in sys.stdin:
     words = line.split()
     # increase counters
     for word in words:
-        for neighbour in words:
-            # write the results to STDOUT (standard output);
-            # what we output here will be the input for the
-            # Reduce step, i.e. the input for reducer.py
-            #
-            # tab-delimited; the trivial word count is 1
-            if (neighbour > word):
-                print '%s\t%s' % (word+"~"+neighbour, 1)
-            elif (neighbour < word):
-                print '%s\t%s' % (neighbour+"~"+word, 1)
-        
+        if (word in topList):
+            for neighbour in words:
+                # write the results to STDOUT (standard output);
+                # what we output here will be the input for the
+                # Reduce step, i.e. the input for reducer.py
+                #
+                # tab-delimited; the trivial word count is 1
+                if (neighbour != word):
+                    print '%s\t%s' % (word+"~"+neighbour, 1)
