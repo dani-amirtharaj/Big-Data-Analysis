@@ -62,4 +62,4 @@ if current_pair == pair:
                 break
             ind+=1
     for count, pair in topList:
-        print '%s\t%s' % (pair[0]+"~"+pair[1], count)
+        print '%s\t%s' % (pair[0]+"~"+pair[1], count/2)
