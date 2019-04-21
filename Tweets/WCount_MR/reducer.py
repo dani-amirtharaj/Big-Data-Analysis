@@ -37,8 +37,8 @@ for line in sys.stdin:
             for boolVal in [current_count > wordCount for wordCount, unused_word in topList]:
                 if (boolVal):
                     topList.insert(ind, [current_count, current_word])
-                    if (len(topList) > 20):
-                        topList.pop(20)
+                    if (len(topList) > 50):
+                        topList.pop(50)
                     break
                 ind+=1
         current_count = count
@@ -56,8 +56,8 @@ if current_word == word:
         for boolVal in [current_count > wordCount for wordCount, word in topList]:
             if (boolVal):
                 topList.insert(ind, [current_count, current_word])
-                if (len(topList) > 20):
-                    topList.pop(20)
+                if (len(topList) > 50):
+                    topList.pop(50)
                 break
             ind+=1
     for count, word in topList:
