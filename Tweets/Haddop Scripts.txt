@@ -1,0 +1,22 @@
+# To check if the mapper and reducer work on sample
+head -n1000 /src/Tweets/Data/Pre-Processed\ Tweets/tweets_text_classical.txt | /src/Tweets/WCount_MR/mapper.py | sort | /src/Tweets/WCount_MR/reducer.py
+
+# Creating input directories on HDFS and copying data from local FS to HDFS
+hadoop fs -mkdir /user/tweets/
+hadoop fs -mkdir /user/tweets/input/
+cd src/Tweets/Data/Pre-Processed\ Tweets/
+hadoop fs -put * /user/input/tweets/
+
+# Submitting job to Hadoop with mapper, reducer, input and output directories for small data word count
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapred.map.tasks=4 -mapper /src/Tweets/WCount_MR/mapper.py -reducer /src/Tweets/WCount_MR/reducer.py -input /user/input/tweets/* -output /user/output/tweets/swcount/
+
+# Submitting job to Hadoop with mapper, reducer, input and output directories for big data word count
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapred.map.tasks=4 -mapper /src/Tweets/WCount_MR/mapper.py -reducer /src/Tweets/WCount_MR/reducer.py -input /user/input/tweets/* -output /user/output/tweets/wcount/
+
+# Submitting job to Hadoop with mapper, reducer, input and output directories for word co-occurence
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapred.map.tasks=4 -mapper /src/Tweets/WCooccurence_MR/mapper.py -reducer /src/Tweets/WCooccurence_MR/reducer.py -input /user/input/tweets/* -output /user/output/tweets/wcooccurence/
+
+# Copying output file from HDFS to local FS
+hadoop fs -get /user/output/tweets/swcount/ src/Tweets/WCount_Output_small/
+hadoop fs -get /user/output/tweets/wcount/ src/Tweets/WCount_Output_big/
+hadoop fs -get /user/output/tweets/wcooccurence/ src/Tweets/WCooccurence_Output/

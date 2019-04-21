@@ -1,4 +1,3 @@
-new~york	343
 music~new	278
 music~year	211
 music~song	186
@@ -21,7 +20,6 @@ new~work	118
 song~year	118
 first~music	117
 first~year	111
-music~york	104
 year~old	102
 music~country	102
 music~sound	101
@@ -44,7 +42,6 @@ album~first	90
 music~band	90
 music~composer	90
 music~concert	89
-time~york	89
 new~jazz	86
 album~band	85
 album~one	85
@@ -157,7 +154,6 @@ music~kind	53
 song~way	53
 album~singer	52
 album~time	52
-music~could	52
 new~musical	52
 new~premiere	52
 song~artist	52
@@ -214,7 +210,6 @@ new~including	47
 one~jazz	47
 one~pop	47
 song~released	47
-year~york	47
 album~sale	46
 music~back	46
 music~come	46
@@ -237,7 +232,6 @@ year~still	46
 album~rock	45
 album~work	45
 new~program	45
-one~york	45
 song~even	45
 song~made	45
 time~two	45
@@ -294,7 +288,6 @@ music~often	42
 music~series	42
 new~march	42
 one~made	42
-work~york	42
 music~old	41
 music~solo	41
 new~production	41
@@ -356,7 +349,6 @@ music~symphony	38
 music~think	38
 new~long	38
 show~pop	38
-year~could	38
 year~made	38
 year~musician	38
 album~including	37
@@ -492,7 +484,6 @@ one~country	33
 one~including	33
 one~night	33
 song~three	33
-song~york	33
 year~five	33
 year~four	33
 album~career	32
@@ -569,14 +560,12 @@ one~theater	31
 time~wrote	31
 year~child	31
 album~top	30
-first~york	30
 music~fan	30
 music~nytimes	30
 music~row	30
 music~space	30
 new~big	30
 new~want	30
-one~could	30
 one~rock	30
 one~yet	30
 song~life	30
@@ -620,7 +609,6 @@ new~take	29
 new~though	29
 one~jackson	29
 one~much	29
-one~say	29
 show~woman	29
 song~different	29
 song~live	29
@@ -652,7 +640,6 @@ one~never	29
 one~thing	29
 show~broadway	29
 show~star	29
-show~york	29
 song~another	29
 time~back	29
 time~day	29
@@ -707,7 +694,6 @@ show~night	28
 show~rock	28
 song~little	28
 time~band	28
-time~could	28
 time~every	28
 time~really	28
 time~thing	28
@@ -764,7 +750,6 @@ one~young	27
 show~award	27
 song~award	27
 song~back	27
-song~could	27
 song~got	27
 song~let	27
 song~sings	27
@@ -829,7 +814,6 @@ new~almost	26
 new~based	26
 new~bass	26
 new~child	26
-new~could	26
 new~hip	26
 new~often	26
 new~open	26
@@ -886,7 +870,6 @@ first~became	25
 first~play	25
 music~inspired	25
 music~room	25
-music~say	25
 music~second	25
 new~audience	25
 new~scene	25
@@ -913,7 +896,6 @@ year~video	25
 album~grammys	24
 album~part	24
 album~play	24
-album~york	24
 first~guitar	24
 music~child	24
 music~debut	24
@@ -1008,7 +990,6 @@ one~though	23
 song~might	23
 song~night	23
 song~recent	23
-song~say	23
 time~including	23
 time~moment	23
 work~dance	23
@@ -1061,7 +1042,6 @@ time~group	23
 time~hit	23
 time~lot	23
 time~right	23
-time~say	23
 time~since	23
 work~people	23
 work~singer	23
@@ -1204,7 +1184,6 @@ work~little	21
 work~make	21
 year~female	21
 year~hip	21
-year~say	21
 album~get	21
 album~late	21
 album~later	21
@@ -1362,7 +1341,6 @@ one~may	20
 show~make	20
 show~punk	20
 show~recent	20
-show~say	20
 song~drum	20
 song~far	20
 song~friday	20
@@ -1660,7 +1638,6 @@ new~idea	17
 new~little	17
 new~louder	17
 new~put	17
-new~say	17
 new~story	17
 new~string	17
 one~award	17
@@ -1691,7 +1668,6 @@ time~little	17
 time~may	17
 time~month	17
 time~together	17
-work~could	17
 work~heard	17
 work~playing	17
 work~take	17
@@ -2227,12 +2203,10 @@ album~end	14
 album~featuring	14
 album~friday	14
 album~note	14
-album~say	14
 album~string	14
 album~worked	14
 album~wrote	14
 first~big	14
-first~could	14
 first~decade	14
 first~hour	14
 first~known	14
@@ -2466,7 +2440,6 @@ year~quartet	13
 year~sale	13
 year~working	13
 album~british	13
-album~could	13
 album~different	13
 album~feel	13
 album~found	13
@@ -2553,7 +2526,6 @@ one~symphony	13
 one~tone	13
 one~writing	13
 show~chicago	13
-show~could	13
 show~decade	13
 show~home	13
 show~jan	13
@@ -2959,7 +2931,6 @@ first~much	11
 first~original	11
 first~perform	11
 first~role	11
-first~say	11
 first~studio	11
 first~together	11
 first~video	11
@@ -3470,7 +3441,6 @@ work~open	10
 work~place	10
 work~presented	10
 work~recital	10
-work~say	10
 work~second	10
 work~see	10
 work~string	10
@@ -4115,6 +4085,7 @@ one~probably	9
 one~quite	9
 one~red	9
 one~running	9
+one~say	9
 one~soundtrack	9
 one~spring	9
 show~actor	9
@@ -4831,6 +4802,7 @@ time~playlist	8
 time~rap	8
 time~return	8
 time~ring	8
+time~say	8
 time~short	8
 time~sing	8
 time~streaming	8
@@ -5754,6 +5726,7 @@ year~report	7
 year~rising	7
 year~running	7
 year~sang	7
+year~say	7
 year~soul	7
 year~starting	7
 year~streaming	7
@@ -8110,6 +8083,7 @@ show~quiet	5
 show~rose	5
 show~running	5
 show~russonello	5
+show~say	5
 show~secret	5
 show~sketch	5
 show~soul	5
@@ -11151,6 +11125,7 @@ first~reporter	3
 first~rest	3
 first~revival	3
 first~royal	3
+first~say	3
 first~served	3
 first~sign	3
 first~slowly	3
@@ -12401,6 +12376,7 @@ work~riff	3
 work~rise	3
 work~risk	3
 work~savage	3
+work~say	3
 work~seen	3
 work~selection	3
 work~seven	3
@@ -12772,6 +12748,7 @@ album~river	3
 album~rooted	3
 album~rose	3
 album~running	3
+album~say	3
 album~seat	3
 album~seems	3
 album~sell	3
@@ -15960,6 +15937,7 @@ music~salt	2
 music~salvatore	2
 music~sander	2
 music~sanford	2
+music~say	2
 music~scope	2
 music~scored	2
 music~sebastian	2
@@ -17379,6 +17357,7 @@ song~rocker	2
 song~rod	2
 song~russian	2
 song~savage	2
+song~say	2
 song~science	2
 song~scored	2
 song~screen	2
@@ -20531,6 +20510,7 @@ new~salvatore	2
 new~sarah	2
 new~satisfying	2
 new~sawdust	2
+new~say	2
 new~screen	2
 new~scriabin	2
 new~sculpture	2
