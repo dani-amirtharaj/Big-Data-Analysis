@@ -1,1 +1,0 @@
-hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapreduce.job.maps=4 -mapper /src//mapper.py -reducer /src/demo/reducer.py -input /user/damirtha/MR/input/* -output /user/damirtha/MR/output

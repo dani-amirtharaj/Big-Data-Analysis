@@ -1,0 +1,14 @@
+# To check if the mapper and reducer work on sample
+head -n1000 /src/demo/*.txt | /src/demo/mapper.py | sort | /src/demo/reducer.py
+
+# Creating input directories on HDFS and copying data from local FS to HDFS
+hadoop fs -mkdir /user/input/
+hadoop fs -mkdir /user/input/demo/
+cd src/demo/
+hadoop fs -put * /user/input/demo/
+
+# Submitting job to Hadoop with mapper, reducer, input and output directories for data word count
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapred.map.tasks=4 -mapper /src/demo/mapper.py -reducer /src/demo/reducer.py -input /user/input/demo/* -output /user/output/demo/
+
+# Copying output file from HDFS to local FS
+hadoop fs -get /user/output/demo/ src/demo/output/

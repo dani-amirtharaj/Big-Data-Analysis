@@ -1,0 +1,22 @@
+# To check if the mapper and reducer work on sample
+head -n1000 /src/Common_Crawl/Data/Pre-Processed\ Articles/commoncrawl_text_music.txt | /src/Common_Crawl/WCount_MR/mapper.py | sort | /src/Common_Crawl/WCount_MR/reducer.py
+
+# Creating input directories on HDFS and copying data from local FS to HDFS
+hadoop fs -mkdir /user/input/
+hadoop fs -mkdir /user/input/commoncrawl/
+cd src/commoncrawl/Data/Pre-Processed\ Articles/
+hadoop fs -put * /user/input/commoncrawl/
+
+# Submitting job to Hadoop with mapper, reducer, input and output directories for small data word count
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapred.map.tasks=4 -mapper /src/Common_Crawl/WCount_MR/mapper.py -reducer /src/Common_Crawl/WCount_MR/reducer.py -input /user/input/commoncrawl/commoncrawl_text_music.txt -output /user/output/commoncrawl/swcount/
+
+# Submitting job to Hadoop with mapper, reducer, input and output directories for big data word count
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapred.map.tasks=4 -mapper /src/Common_Crawl/WCount_MR/mapper.py -reducer /src/Common_Crawl/WCount_MR/reducer.py -input /user/input/commoncrawl/* -output /user/output/commoncrawl/wcount/
+
+# Submitting job to Hadoop with mapper, reducer, input and output directories for word co-occurence
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapred.map.tasks=4 -mapper /src/Common_Crawl/WCooccurence_MR/mapper.py -reducer /src/Common_Crawl/WCooccurence_MR/reducer.py -input /user/input/commoncrawl/* -output /user/output/commoncrawl/wcooccurence/
+
+# Copying output file from HDFS to local FS
+hadoop fs -get /user/output/commoncrawl/swcount/ src/commoncrawl/WCount_Output_small/
+hadoop fs -get /user/output/commoncrawl/wcount/ src/commoncrawl/WCount_Output_big/
+hadoop fs -get /user/output/commoncrawl/wcooccurence/ src/commoncrawl/WCooccurence_Output/

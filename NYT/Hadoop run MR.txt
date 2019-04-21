@@ -1,1 +1,0 @@
-hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapreduce.job.maps=4 -mapper /src/Common\ Crawl/Word\ Count\ MR/mapper.py -reducer /src/Common\ Crawl/Word\ Count\ MR/reducer.py -input /user/commoncrawl/input/* -output /user/commoncrawl/output
