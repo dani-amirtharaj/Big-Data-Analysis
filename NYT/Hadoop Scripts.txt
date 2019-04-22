@@ -17,6 +17,6 @@ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapr
 hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapred.map.tasks=4 -mapper /src/NYT/WCooccurence_MR/mapper.py -reducer /src/NYT/WCooccurence_MR/reducer.py -input /user/input/nyt/* -output /user/output/nyt/wcooccurence/
 
 # Copying output file from HDFS to local FS
-hadoop fs -get /user/output/nyt/swcount/ src/NYT/WCount_Output_small/
-hadoop fs -get /user/output/nyt/wcount/ src/NYT/WCount_Output_big/
-hadoop fs -get /user/output/nyt/wcooccurence/ src/NYT/WCooccurence_Output/
+hadoop fs -get /user/output/nyt/swcount/ /src/NYT/WCount_Output_small/
+hadoop fs -get /user/output/nyt/wcount/ /src/NYT/WCount_Output_big/
+hadoop fs -get /user/output/nyt/wcooccurence/ /src/NYT/WCooccurence_Output/

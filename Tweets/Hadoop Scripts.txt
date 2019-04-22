@@ -17,6 +17,6 @@ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapr
 hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar -D mapred.map.tasks=4 -mapper /src/Tweets/WCooccurence_MR/mapper.py -reducer /src/Tweets/WCooccurence_MR/reducer.py -input /user/input/tweets/* -output /user/output/tweets/wcooccurence/
 
 # Copying output file from HDFS to local FS
-hadoop fs -get /user/output/tweets/swcount/ src/Tweets/WCount_Output_small/
-hadoop fs -get /user/output/tweets/wcount/ src/Tweets/WCount_Output_big/
-hadoop fs -get /user/output/tweets/wcooccurence/ src/Tweets/WCooccurence_Output/
+hadoop fs -get /user/output/tweets/swcount/ /src/Tweets/WCount_Output_small/
+hadoop fs -get /user/output/tweets/wcount/ /src/Tweets/WCount_Output_big/
+hadoop fs -get /user/output/tweets/wcooccurence/ /src/Tweets/WCooccurence_Output/
